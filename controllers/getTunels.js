@@ -1,4 +1,4 @@
-import Tunel from '../models/Tunel.js'
+import Tunel from '../models/tunel.js'
 
 export const getTunels = async(req,res) => {
   try {
