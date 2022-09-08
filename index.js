@@ -50,7 +50,6 @@ app.use(express.json())
     res.status(200).json("File has been uploaded");
   });
 
-
 app.use('/auth', authRoute);
 app.use('/post', postRoute);
 app.use('/tunel', tunelRoute);
