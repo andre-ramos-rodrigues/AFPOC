@@ -19,19 +19,15 @@ dotenv.config();
 
 app.use("/images", express.static(path.join(__dirname, "/images")));
 
+// cors
 const corsConfig = {
   origin: true,
   credentials: true,
 };
 app.use(cors(corsConfig));
 
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "https://afpoc-idoso.herokuapp.com/"); // update to match the domain you will make the request from
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
-
 app.options('*', cors(corsConfig));
+
 app.use(cookieParser())
 app.use(express.json())
 
