@@ -7,9 +7,9 @@ import { getTunels } from "../controllers/getTunels.js";
 import { deleteTunel } from "../controllers/deleteTunel.js";
 const router = express.Router()
 
-router.post('/', getCookies, addTunel)
-router.put('/:id', getCookies, editTunel)
-router.delete('/:id', getCookies, deleteTunel)
+router.post('/', addTunel)
+router.put('/:id', editTunel)
+router.delete('/:id', deleteTunel)
 router.get('/:id', getSingleTunel)
 router.get('/', getTunels)
 

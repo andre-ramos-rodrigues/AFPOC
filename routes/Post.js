@@ -7,9 +7,9 @@ import { getPosts } from "../controllers/getPosts.js";
 import { getSinglePost } from "../controllers/getSinglePost.js";
 const router = express.Router()
 
-router.post('/', getCookies, addPost)
-router.put('/:id', getCookies, editPost)
-router.delete('/:id', getCookies, deletePost)
+router.post('/', addPost)
+router.put('/:id', editPost)
+router.delete('/:id', deletePost)
 router.get('/:id', getSinglePost)
 router.get('/', getPosts)
 
