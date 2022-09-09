@@ -11,6 +11,9 @@ export const addPost = async(req,res) => {
 
   try {
     const Post = await newPost.save()
+    res.header("Access-Control-Expose-Headers", "*")
+    res.header("Access-Control-Allow-Origin", "*")
+    res.header("Access-Control-Allow-Headers", "*")
     res.status(200).json(Post)
   } catch(err) {
     res.status(500).send(err)
