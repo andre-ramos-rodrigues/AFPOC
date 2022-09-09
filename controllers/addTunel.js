@@ -5,7 +5,7 @@ export const addTunel = async(req,res) => {
   const user = await User.findById(req.user.id)
 
   const newTunel = new Tunel({
-    autor: user.username,
+    autor: req.body.username,
      ...req.body, 
   })
 

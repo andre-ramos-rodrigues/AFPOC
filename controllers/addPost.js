@@ -5,7 +5,7 @@ export const addPost = async(req,res) => {
   const user = await User.findById(req.user.id)
 
   const newPost = new Post({
-    autor: user.username,
+    autor: req.body.username,
      ...req.body, 
   })
 
