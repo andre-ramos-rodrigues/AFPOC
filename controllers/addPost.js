@@ -2,7 +2,8 @@ import User from '../models/user.js'
 import Post from '../models/post.js'
 
 export const addPost = async(req,res) => {
-  const user = await User.findById(req.user.id)
+  res.set('Access-Control-Allow-Origin', '*');
+  //const user = await User.findById(req.user.id)
 
   const newPost = new Post({
     autor: req.body.username,
@@ -11,9 +12,6 @@ export const addPost = async(req,res) => {
 
   try {
     const Post = await newPost.save()
-    res.header("Access-Control-Expose-Headers", "*")
-    res.header("Access-Control-Allow-Origin", "*")
-    res.header("Access-Control-Allow-Headers", "*")
     res.status(200).json(Post)
   } catch(err) {
     res.status(500).send(err)
