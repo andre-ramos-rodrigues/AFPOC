@@ -2,7 +2,7 @@ import User from '../models/user.js'
 import Post from '../models/post.js'
 
 export const addPost = async(req,res) => {
-  res.set('Access-Control-Allow-Origin', '*');
+  res.set('Access-Control-Allow-Origin', 'http://localhost:3000');
   //const user = await User.findById(req.user.id)
 
   const newPost = new Post({
