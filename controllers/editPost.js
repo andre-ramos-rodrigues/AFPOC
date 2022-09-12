@@ -13,7 +13,7 @@ export const editPost = async(req,res) => {
           },
           { new: true }
         );
-        res.set('Access-Control-Allow-Origin', 'http://localhost:3000');
+        res.set('Access-Control-Allow-Origin', 'https://631f5bfaf482183823aa8ed2--cute-unicorn-84762b.netlify.app/');
         res.status(200).json(updatedPost);
       } catch (err) {
         res.status(500).json(err);
