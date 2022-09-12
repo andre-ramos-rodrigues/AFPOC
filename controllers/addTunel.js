@@ -10,7 +10,7 @@ export const addTunel = async(req,res) => {
 
   try {
     const Tunel = await newTunel.save()
-    res.set('Access-Control-Allow-Origin', 'https://631f5bfaf482183823aa8ed2--cute-unicorn-84762b.netlify.app/');
+    res.set('Access-Control-Allow-Origin', 'https://cute-unicorn-84762b.netlify.app');
     res.status(200).json(Tunel)
   } catch(err) {
     res.status(500).send(err)

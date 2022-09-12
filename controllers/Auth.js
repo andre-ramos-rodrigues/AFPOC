@@ -15,7 +15,7 @@ export const register = async (req, res) => {
     });
 
     const saved = await newUser.save();
-    res.set('Access-Control-Allow-Origin', 'https://631f5bfaf482183823aa8ed2--cute-unicorn-84762b.netlify.app/');
+    res.set('Access-Control-Allow-Origin', 'https://cute-unicorn-84762b.netlify.app');
     res.status(200).json('usuário salvo: ' + saved.username);
   } catch (err) {
     res.status(500).json(err);

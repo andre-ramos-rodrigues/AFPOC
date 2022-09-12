@@ -2,7 +2,7 @@ import User from '../models/user.js'
 import Post from '../models/post.js'
 
 export const addPost = async(req,res) => {
-  res.set('Access-Control-Allow-Origin', 'https://631f5bfaf482183823aa8ed2--cute-unicorn-84762b.netlify.app/');
+  res.set('Access-Control-Allow-Origin', 'https://cute-unicorn-84762b.netlify.app');
   //const user = await User.findById(req.user.id)
 
   const newPost = new Post({
