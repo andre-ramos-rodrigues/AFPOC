@@ -7,9 +7,7 @@ export const deleteTunel = async(req,res) => {
     if (post.username === req.body.username) {
       try {
         await post.delete()
-        res.header("Access-Control-Expose-Headers", "*")
-        res.header("Access-Control-Allow-Origin", "*")
-        res.header("Access-Control-Allow-Headers", "*")
+        res.set('Access-Control-Allow-Origin', 'http://localhost:3000');
         res.status(200).json("post deletado");
       } catch (err) {
         res.status(500).json(err);

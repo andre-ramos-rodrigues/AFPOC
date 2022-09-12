@@ -15,9 +15,7 @@ export const register = async (req, res) => {
     });
 
     const saved = await newUser.save();
-    res.header("Access-Control-Expose-Headers", "*")
-    res.header("Access-Control-Allow-Origin", "*")
-    res.header("Access-Control-Allow-Headers", "*")
+    res.set('Access-Control-Allow-Origin', 'http://localhost:3000');
     res.status(200).json('usuário salvo: ' + saved.username);
   } catch (err) {
     res.status(500).json(err);

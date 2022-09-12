@@ -11,9 +11,7 @@ export const addTunel = async(req,res) => {
 
   try {
     const Tunel = await newTunel.save()
-    res.header("Access-Control-Expose-Headers", "*")
-    res.header("Access-Control-Allow-Origin", "*")
-    res.header("Access-Control-Allow-Headers", "*")
+    res.set('Access-Control-Allow-Origin', 'http://localhost:3000');
     res.status(200).json(Tunel)
   } catch(err) {
     res.status(500).send(err)
